@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Barra de Pesquisa -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pesquisar"
+        android:padding="10dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Filtro por Mês -->
+    <Spinner
+        android:id="@+id/monthFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/months_array"
+        android:layout_below="@id/searchBar"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Área de Lançamentos -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/monthFilter"
+        android:layout_above="@id/addButton"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:id="@+id/linearLayout">
+
+            <!-- Adicione seus itens de lançamento aqui dinamicamente -->
+            <!-- Exemplo de um item de lançamento -->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo: "
+        android:textSize="25sp"
+        android:textColor="@color/tema"
+        android:layout_above="@id/addButton"
+        android:layout_marginVertical="50dp"
+        android:layout_marginLeft="150dp"/>
+
+    <!-- Botão de Adicionar Lançamentos -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Lançamento"
+        android:textAllCaps="false"
+        android:background="@color/tema"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
