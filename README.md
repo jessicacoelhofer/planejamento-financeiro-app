@@ -1,8 +1,4 @@
 
----
-
-## 🔹 3. `planejamento-financeiro-app`
-
 ```markdown
 # 📊 App de Planejamento Financeiro (Java)
 
